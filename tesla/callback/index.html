@@ -1,0 +1,9 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Returning to EEAccess…</title>
+<script>
+  // Tesla appended ?code=...&state=... — bounce to the app's custom scheme so
+  // ASWebAuthenticationSession (listening for "eeaccess") captures it.
+  location.replace("eeaccess://tesla/callback" + location.search);
+</script>
+<p>Signing you in… if nothing happens, return to EEAccess.</p>
