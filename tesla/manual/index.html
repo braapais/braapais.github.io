@@ -1,0 +1,13 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>EEAccess — authorization code</title>
+<body style="font-family:system-ui;max-width:40rem;margin:2rem auto;padding:0 1rem;line-height:1.5">
+  <h2>Your Tesla authorization code</h2>
+  <p>Copy this and paste it back where the server login is waiting:</p>
+  <pre id="c" style="font-size:1.05rem;background:#f0f0f0;padding:1rem;border-radius:8px;user-select:all;white-space:pre-wrap;word-break:break-all"></pre>
+  <p style="color:#666;font-size:.9rem">This page only reads the code from the URL — nothing is sent anywhere.</p>
+  <script>
+    const p = new URLSearchParams(location.search);
+    document.getElementById('c').textContent = p.get('code') || '(no code found in the URL)';
+  </script>
+</body>
